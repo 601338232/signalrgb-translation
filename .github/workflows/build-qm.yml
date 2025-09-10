@@ -26,9 +26,9 @@ jobs:
         run: lrelease output.ts -qm output.qm
         # 用 lrelease 编译生成 QM 文件
 
-      - name: Upload QM artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: qm-file
-          path: output.qm
+- name: Upload QM artifact
+  uses: actions/upload-artifact@v4
+  with:
+    name: qm-file
+    path: output.qm
           # 上传 QM 文件作为产物，可以下载
